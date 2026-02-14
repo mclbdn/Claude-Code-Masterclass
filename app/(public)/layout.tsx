@@ -4,7 +4,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <main className="public">
+    <main className="public min-h-full">
       {children}
     </main>
   )
