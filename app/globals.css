@@ -43,6 +43,10 @@ svg.logo {
 .form-title {
   @apply text-center text-xl font-bold;
 }
+.grid-layout {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
 
 /* button styles */
 .btn {

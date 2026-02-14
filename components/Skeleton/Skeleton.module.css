@@ -1,0 +1,57 @@
+.skeleton-wrapper {
+  @apply p-6 rounded-lg;
+  background-color: var(--color-dark);
+}
+
+.skeleton-header {
+  @apply flex gap-4 mb-8;
+}
+
+.skeleton-avatar {
+  @apply rounded-full;
+  width: 120px;
+  height: 120px;
+  background-color: var(--color-lighter);
+  flex-shrink: 0;
+}
+
+.skeleton-header-text {
+  @apply flex flex-col gap-3 justify-center flex-1;
+}
+
+.skeleton-body {
+  @apply flex flex-col gap-4;
+}
+
+.skeleton-line {
+  @apply rounded;
+  height: 16px;
+  background-color: var(--color-lighter);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-title {
+  @apply h-5;
+  width: 60%;
+}
+
+.skeleton-subtitle {
+  width: 40%;
+}
+
+.skeleton-full {
+  width: 100%;
+}
+
+.skeleton-medium {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
