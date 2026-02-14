@@ -43,3 +43,13 @@ svg.logo {
 .form-title {
   @apply text-center text-xl font-bold;
 }
+
+/* button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  background-color: var(--color-primary);
+  color: var(--color-heading);
+}
+.btn:hover {
+  @apply opacity-90;
+}

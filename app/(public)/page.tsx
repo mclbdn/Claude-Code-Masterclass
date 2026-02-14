@@ -12,6 +12,13 @@ export default function Home() {
           P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
         </h1>
         <div>Tiny missions. Big office mischief.</div>
+        <p className="mt-6 max-w-md text-center text-body">
+          Welcome to Pocket Heist — the ultimate platform for pulling off
+          harmless office capers. Assign sneaky missions to your coworkers,
+          track their progress, and earn bragging rights for completed heists.
+          Whether it&apos;s swapping someone&apos;s desktop wallpaper or hiding
+          all the staples, no mission is too small.
+        </p>
       </div>
     </div>
   )
