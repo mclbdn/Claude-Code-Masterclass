@@ -1,13 +1,16 @@
-.skeleton-wrapper {
+@reference "../../app/globals.css";
+
+.wrapper {
   @apply p-6 rounded-lg;
-  background-color: var(--color-dark);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-lighter);
 }
 
-.skeleton-header {
+.header {
   @apply flex gap-4 mb-8;
 }
 
-.skeleton-avatar {
+.avatar {
   @apply rounded-full;
   width: 120px;
   height: 120px;
@@ -15,35 +18,35 @@
   flex-shrink: 0;
 }
 
-.skeleton-header-text {
+.headerText {
   @apply flex flex-col gap-3 justify-center flex-1;
 }
 
-.skeleton-body {
+.body {
   @apply flex flex-col gap-4;
 }
 
-.skeleton-line {
+.line {
   @apply rounded;
   height: 16px;
   background-color: var(--color-lighter);
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.skeleton-title {
+.title {
   @apply h-5;
   width: 60%;
 }
 
-.skeleton-subtitle {
+.subtitle {
   width: 40%;
 }
 
-.skeleton-full {
+.full {
   width: 100%;
 }
 
-.skeleton-medium {
+.medium {
   width: 60%;
 }
 

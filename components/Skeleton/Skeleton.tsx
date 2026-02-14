@@ -1,17 +1,19 @@
+import styles from "./Skeleton.module.css"
+
 export default function Skeleton() {
   return (
-    <div className="skeleton-wrapper">
-      <div className="skeleton-header">
-        <div className="skeleton-avatar" />
-        <div className="skeleton-header-text">
-          <div className="skeleton-line skeleton-title" />
-          <div className="skeleton-line skeleton-subtitle" />
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <div className={styles.avatar} />
+        <div className={styles.headerText}>
+          <div className={`${styles.line} ${styles.title}`} />
+          <div className={`${styles.line} ${styles.subtitle}`} />
         </div>
       </div>
-      <div className="skeleton-body">
-        <div className="skeleton-line skeleton-full" />
-        <div className="skeleton-line skeleton-full" />
-        <div className="skeleton-line skeleton-medium" />
+      <div className={styles.body}>
+        <div className={`${styles.line} ${styles.full}`} />
+        <div className={`${styles.line} ${styles.full}`} />
+        <div className={`${styles.line} ${styles.medium}`} />
       </div>
     </div>
   )
