@@ -1,0 +1,16 @@
+@reference "../../app/globals.css";
+
+.avatar {
+  @apply rounded-full bg-primary text-black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.initials {
+  user-select: none;
+}
