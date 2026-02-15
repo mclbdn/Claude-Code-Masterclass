@@ -7,12 +7,10 @@ allowed-tools: Bash(git status:*), Bash(git diff --staged), Bash(git commit:*)
 
 Analyze above staged git changes and create a commit message. Use present tense and explain "why" something has changed, not just "what" has changed.
 
-## Run these commands:
+## Context:
 
-```bash
-git status
-git diff --staged
-```
+- Current git status: !`git status`
+- Current git diff: !`git diff --staged`
 
 ## Commit types with emojis:
 Only use the following emojis: 
