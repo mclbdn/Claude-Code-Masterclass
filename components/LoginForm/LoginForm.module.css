@@ -1,0 +1,70 @@
+@reference "../../app/globals.css";
+
+.form {
+  @apply w-full max-w-md mx-auto mt-8;
+}
+
+.inputGroup {
+  @apply mb-4;
+}
+
+.label {
+  @apply block text-sm font-medium mb-2 text-heading;
+}
+
+.input {
+  @apply w-full px-4 py-2 rounded-lg bg-lighter text-heading border border-transparent;
+}
+
+.input:focus {
+  @apply outline-none border-primary;
+}
+
+.inputError {
+  @apply border-error;
+}
+
+.passwordWrapper {
+  @apply relative;
+}
+
+.passwordWrapper .input {
+  @apply pr-12;
+}
+
+.toggleButton {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-body;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  @apply text-heading;
+}
+
+.error {
+  @apply text-error text-sm mt-1;
+}
+
+.submitButton {
+  @apply w-full py-2 rounded-lg font-medium transition-colors mt-2;
+  background-color: var(--color-primary);
+  color: var(--color-heading);
+}
+
+.submitButton:hover {
+  @apply opacity-90;
+}
+
+.switchForm {
+  @apply text-center mt-6 text-sm text-body;
+}
+
+.link {
+  @apply text-primary;
+}
+
+.link:hover {
+  @apply underline;
+}
