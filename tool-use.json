@@ -6,36 +6,37 @@
   "hook_event_name": "PostToolUse",
   "tool_name": "Edit",
   "tool_input": {
-    "file_path": "/Users/michalbednar/DEV/Claude-Code-Masterclass/app/(public)/login/page.tsx",
-    "old_string": "        <h2 className=\"form-title\">Log in to Your Account</h2>",
-    "new_string": "        <h1 className=\"form-title\">Log in to Your Account</h1>",
+    "file_path": "/Users/michalbednar/DEV/Claude-Code-Masterclass/app/(public)/page.tsx",
+    "old_string": "        <div>\n          Small pranks. Epic chaos.</div>",
+    "new_string": "        <div>Mischief made simple.</div>",
     "replace_all": false
   },
   "tool_response": {
-    "filePath": "/Users/michalbednar/DEV/Claude-Code-Masterclass/app/(public)/login/page.tsx",
-    "oldString": "        <h2 className=\"form-title\">Log in to Your Account</h2>",
-    "newString": "        <h1 className=\"form-title\">Log in to Your Account</h1>",
-    "originalFile": "export default function SignupPage() {\n  return (\n    <div className=\"center-content\">\n      <div className=\"page-content\">\n        <h2 className=\"form-title\">Log in to Your Account</h2>\n      </div>\n    </div>\n  )\n}",
+    "filePath": "/Users/michalbednar/DEV/Claude-Code-Masterclass/app/(public)/page.tsx",
+    "oldString": "        <div>\n          Small pranks. Epic chaos.</div>",
+    "newString": "        <div>Mischief made simple.</div>",
+    "originalFile": "// this page should be used only as a splash page to decide where a user should be navigated to\n// when logged in --> to /heists\n// when not logged in --> to /login\n\nimport { Clock8 } from \"lucide-react\"\n\nexport default function Home() {\n  return (\n    <div className=\"center-content\">\n\n      <div className=\"page-content\">\n\n        <h1>\n\n\n\n          P<Clock8 className=\"logo\" strokeWidth={2.75} />\n          cket Heist\n        </h1>\n        <div>\n          Small pranks. Epic chaos.</div>\n        <p className=\"mt-6 max-w-md text-center text-body\">\n          Welcome to Pocket Heist — the ultimate platform for pulling off\n          harmless office capers. Assign sneaky missions to your coworkers,\n          track their progress, and earn bragging rights for completed heists.\n          Whether it&apos;s swapping someone&apos;s desktop wallpaper or hiding\n          all the staples, no mission is too small.\n        </p>\n      </div>\n    </div>\n  )\n}\n",
     "structuredPatch": [
       {
-        "oldStart": 2,
-        "oldLines": 7,
-        "newStart": 2,
+        "oldStart": 17,
+        "oldLines": 8,
+        "newStart": 17,
         "newLines": 7,
         "lines": [
-          "   return (",
-          "     <div className=\"center-content\">",
-          "       <div className=\"page-content\">",
-          "-        <h2 className=\"form-title\">Log in to Your Account</h2>",
-          "+        <h1 className=\"form-title\">Log in to Your Account</h1>",
-          "       </div>",
-          "     </div>",
-          "   )"
+          "           P<Clock8 className=\"logo\" strokeWidth={2.75} />",
+          "           cket Heist",
+          "         </h1>",
+          "-        <div>",
+          "-          Small pranks. Epic chaos.</div>",
+          "+        <div>Mischief made simple.</div>",
+          "         <p className=\"mt-6 max-w-md text-center text-body\">",
+          "           Welcome to Pocket Heist — the ultimate platform for pulling off",
+          "           harmless office capers. Assign sneaky missions to your coworkers,"
         ]
       }
     ],
     "userModified": false,
     "replaceAll": false
   },
-  "tool_use_id": "toolu_01FC8FRBrH9hrm53yboh7YDi"
+  "tool_use_id": "toolu_013QPHT3Nk9RmJEgwxNH7UD5"
 }

@@ -2,16 +2,17 @@
 // when logged in --> to /heists
 // when not logged in --> to /login
 
-import { Clock8 } from "lucide-react"
+import { Clock8 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="center-content">
       <div className="page-content">
         <h1>
-          P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
+          P<Clock8 className="logo" strokeWidth={2.75} />
+          cket Heist
         </h1>
-        <div>Small pranks. Epic chaos.</div>
+        <div>Plot. Prank. Gloat.</div>
         <p className="mt-6 max-w-md text-center text-body">
           Welcome to Pocket Heist — the ultimate platform for pulling off
           harmless office capers. Assign sneaky missions to your coworkers,
@@ -21,5 +22,5 @@ export default function Home() {
         </p>
       </div>
     </div>
-  )
+  );
 }
