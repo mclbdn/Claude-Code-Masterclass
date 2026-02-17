@@ -141,3 +141,6 @@ This project uses three custom Claude Code skills for structured development:
 - Preview page (`/preview`) is used to showcase components during development
 - ESLint config uses Next.js recommended rules with TypeScript support
 - The project ignores `.next/`, `out/`, `build/`, and `next-env.d.ts` in linting
+
+- **important:** When implementing any lib/framework-specific features, ALWAYS check the approrpiate lib/framework
+documentation using the Context7 MCP server before writing any code.
