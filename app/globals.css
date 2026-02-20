@@ -57,3 +57,6 @@ svg.logo {
 .btn:hover {
   @apply opacity-90;
 }
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}

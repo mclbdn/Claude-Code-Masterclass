@@ -15,3 +15,7 @@
 svg.logo {
   display: inline-block;
 }
+
+.navList {
+  @apply flex justify-between items-center w-full;
+}
