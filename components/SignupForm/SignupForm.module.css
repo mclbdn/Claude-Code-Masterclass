@@ -47,6 +47,14 @@
   @apply text-error text-sm mt-1;
 }
 
+.firebaseError {
+  @apply text-red-600 text-sm mb-4 p-3 bg-red-50 rounded;
+}
+
+.successMessage {
+  @apply text-green-600 text-sm mb-4 p-3 bg-green-50 rounded;
+}
+
 .submitButton {
   @apply w-full py-2 rounded-lg font-medium transition-colors mt-2;
   background-color: var(--color-primary);
