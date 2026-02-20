@@ -1,7 +1,24 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import LoginForm from "@/components/LoginForm";
+
+// Mock Firebase and router
+const mockSignIn = vi.fn();
+
+vi.mock("next/navigation", () => ({
+  useRouter: () => ({
+    push: vi.fn(),
+  }),
+}));
+
+vi.mock("firebase/auth", () => ({
+  signInWithEmailAndPassword: () => mockSignIn(),
+}));
+
+vi.mock("@/lib/firebase", () => ({
+  auth: {},
+}));
 
 describe("LoginForm", () => {
   it("renders all form elements", () => {
@@ -70,21 +87,20 @@ describe("LoginForm", () => {
     ).toBeInTheDocument();
   });
 
-  it("logs to console with valid form data", async () => {
+  it("calls signInWithEmailAndPassword with valid credentials", async () => {
     const user = userEvent.setup();
-    const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    mockSignIn.mockResolvedValue({ user: { uid: "123" } });
     render(<LoginForm />);
 
     await user.type(screen.getByLabelText(/email/i), "test@example.com");
     await user.type(screen.getByLabelText("Password"), "password123");
     await user.click(screen.getByRole("button", { name: /login/i }));
 
-    expect(consoleSpy).toHaveBeenCalledWith("Login attempt:", {
-      email: "test@example.com",
-      password: "password123",
-    });
+    expect(mockSignIn).toHaveBeenCalled();
 
-    consoleSpy.mockRestore();
+    await waitFor(() => {
+      expect(screen.getByText("Login successful!")).toBeInTheDocument();
+    });
   });
 
   it("sets aria-invalid on fields with errors", async () => {

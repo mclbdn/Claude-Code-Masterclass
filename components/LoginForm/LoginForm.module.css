@@ -68,3 +68,11 @@
 .link:hover {
   @apply underline;
 }
+
+.firebaseError {
+  @apply text-red-600 text-sm mb-4 p-3 bg-red-50 rounded;
+}
+
+.successMessage {
+  @apply text-green-600 text-sm mb-4 p-3 bg-green-50 rounded;
+}
