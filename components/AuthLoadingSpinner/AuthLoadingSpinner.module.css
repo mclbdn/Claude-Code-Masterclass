@@ -1,0 +1,24 @@
+@reference "../../app/globals.css";
+
+.container {
+  @apply min-h-full flex flex-col items-center justify-center gap-4;
+}
+
+.spinner {
+  animation: spin 1.5s linear infinite;
+  color: var(--color-dark);
+}
+
+.text {
+  @apply text-lg;
+  color: var(--color-dark);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
