@@ -1,0 +1,71 @@
+@reference "../../app/globals.css";
+
+.form {
+  @apply w-full max-w-md mx-auto mt-8;
+}
+
+.inputGroup {
+  @apply mb-4;
+}
+
+.label {
+  @apply block text-sm font-medium mb-2 text-heading;
+}
+
+.input {
+  @apply w-full px-4 py-2 rounded-lg bg-lighter text-heading border border-transparent;
+}
+
+.input:focus {
+  @apply outline-none border-primary;
+}
+
+.textarea {
+  @apply w-full px-4 py-2 rounded-lg bg-lighter text-heading border border-transparent;
+}
+
+.textarea:focus {
+  @apply outline-none border-primary;
+}
+
+.select {
+  @apply w-full px-4 py-2 rounded-lg bg-lighter text-heading border border-transparent appearance-none cursor-pointer;
+}
+
+.select:focus {
+  @apply outline-none border-primary;
+}
+
+.inputError {
+  @apply border-error;
+}
+
+.error {
+  @apply text-error text-sm mt-1;
+}
+
+.submitButton {
+  @apply w-full py-2 rounded-lg font-medium transition-colors mt-2;
+  background-color: var(--color-primary);
+  color: var(--color-heading);
+}
+
+.submitButton:hover:not(:disabled) {
+  @apply opacity-90;
+}
+
+.submitButton:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.firebaseError {
+  @apply text-red-600 text-sm mb-4 p-3 bg-red-50 rounded;
+}
+
+.emptyState {
+  @apply text-center py-8 text-body;
+}
+
+.emptyState p {
+  @apply mb-2;
+}
