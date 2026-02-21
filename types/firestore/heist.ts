@@ -16,7 +16,7 @@ export interface Heist {
   assignedTo: string;
   assignedToCodename: string;
   createdAt: Date;
-  deadline: Date;
+  deadline: Date; // automatically 48 hrs after creation
   finalStatus: HeistStatus | null;
 }
 
