@@ -1,6 +1,7 @@
 "use client";
 
 import { useHeists } from "@/hooks/useHeists";
+import HeistCard from "@/components/HeistCard";
 
 export default function HeistsPage() {
   const {
@@ -26,9 +27,9 @@ export default function HeistsPage() {
         {activeLoading && <p>Loading...</p>}
         {activeError && <p className="error">Error: {activeError}</p>}
         {!activeLoading && activeHeists.length === 0 && <p>No active heists</p>}
-        <ul>
+        <ul className="grid-layout" role="list">
           {activeHeists.map((heist) => (
-            <li key={heist.id}>{heist.title}</li>
+            <HeistCard key={heist.id} heist={heist} />
           ))}
         </ul>
       </div>
@@ -40,9 +41,9 @@ export default function HeistsPage() {
         {!assignedLoading && assignedHeists.length === 0 && (
           <p>No assigned heists</p>
         )}
-        <ul>
+        <ul className="grid-layout" role="list">
           {assignedHeists.map((heist) => (
-            <li key={heist.id}>{heist.title}</li>
+            <HeistCard key={heist.id} heist={heist} />
           ))}
         </ul>
       </div>
@@ -54,9 +55,9 @@ export default function HeistsPage() {
         {!expiredLoading && expiredHeists.length === 0 && (
           <p>No expired heists</p>
         )}
-        <ul>
+        <ul className="grid-layout" role="list">
           {expiredHeists.map((heist) => (
-            <li key={heist.id}>{heist.title}</li>
+            <HeistCard key={heist.id} heist={heist} />
           ))}
         </ul>
       </div>

@@ -46,6 +46,9 @@ svg.logo {
 .grid-layout {
   @apply grid gap-6;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* button styles */

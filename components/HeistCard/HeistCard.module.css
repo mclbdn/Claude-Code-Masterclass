@@ -1,0 +1,86 @@
+@reference "../../app/globals.css";
+
+.card {
+  @apply rounded-lg p-6 border transition-all;
+  background-color: var(--color-lighter);
+  border-color: var(--color-lighter);
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+.cardExpired {
+  @apply opacity-60;
+  border-color: transparent;
+}
+
+.cardExpired:hover {
+  border-color: transparent;
+}
+
+.cardHeader {
+  @apply flex justify-between items-start mb-4 gap-4;
+}
+
+.title {
+  @apply text-xl font-bold flex-1;
+  color: var(--color-heading);
+}
+
+.titleExpired {
+  color: var(--color-body);
+}
+
+.badgeSuccess,
+.badgeFailure {
+  @apply px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap;
+}
+
+.badgeSuccess {
+  background-color: rgba(5, 223, 114, 0.2);
+  color: var(--color-success);
+}
+
+.badgeFailure {
+  background-color: rgba(255, 100, 103, 0.2);
+  color: var(--color-error);
+}
+
+.cardBody {
+  @apply mb-4;
+}
+
+.description {
+  @apply text-sm line-clamp-2;
+  color: var(--color-body);
+}
+
+.descriptionExpired {
+  @apply opacity-70;
+}
+
+.cardFooter {
+  @apply flex justify-between items-center gap-4 text-sm flex-wrap;
+}
+
+.assignee {
+  color: var(--color-body);
+}
+
+.deadlineInfo {
+  @apply flex items-center gap-1;
+}
+
+.deadline {
+  color: var(--color-body);
+}
+
+.timeRemaining {
+  @apply font-medium;
+  color: var(--color-primary);
+}
+
+.expiredText {
+  color: var(--color-error);
+}
